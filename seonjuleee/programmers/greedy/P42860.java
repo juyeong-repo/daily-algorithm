@@ -1,6 +1,6 @@
 /**
  * 2023.05.01
- * 43165. 조이스틱
+ * 42860. 조이스틱
  * https://school.programmers.co.kr/learn/courses/30/lessons/42860
  *
  * Site: Programmers
