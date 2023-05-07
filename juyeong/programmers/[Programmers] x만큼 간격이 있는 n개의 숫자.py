@@ -9,7 +9,7 @@ def solution(x, n):
         answer.append(x*i)
     return answer
 
-# 위 코드는 하나의 리스트로 반환할 수 있다 
+# 위 코드는 하나의 리스트로 변환 가능
 def solution(x, n):
     return [x*i for i in range(1, n+1)]
 
