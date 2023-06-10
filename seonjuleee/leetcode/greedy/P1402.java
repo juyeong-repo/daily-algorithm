@@ -1,6 +1,6 @@
 /**
  * 2023.06.10
- * 1405. Reducing Dishes
+ * 1402. Reducing Dishes
  * https://leetcode.com/problems/reducing-dishes
  *
  * Site: Leetcode
