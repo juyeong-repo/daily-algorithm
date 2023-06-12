@@ -1,5 +1,5 @@
 /**
- * 2023.05.20
+ * 2023.06.12
  * 392. Is Subsequence
  * https://leetcode.com/problems/is-subsequence
  *
