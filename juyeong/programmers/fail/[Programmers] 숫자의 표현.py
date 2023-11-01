@@ -38,3 +38,39 @@ def solution(n):
             front += 1
     return answer
 
+
+
+"""
+2. 완전탐색 알고리즘
+문제를 sub로 쪼갠다. 중간중간 연산값을 저장하여 일차원 배열에 넣은 뒤 활용한다. (메모이제이션)
+경우의 수를 따지는 경우에는 DP 사용이 거의 가능한데
+메모이제이션을 사용하면 기존 재귀방법이 2의 n승 시간 복잡도라면 O(n)으로 축소(?) 가능하다.
+다만 이게 최고의 DP 풀이법인지는 조금 의문 -> 다른 답안 더 찾아보자
+
+2중 포문을 사용하여 연속된 숫자를 sum에 더한다. sum이 n이 되면 answer ++ 후 두번째 포문을 나가서
+다시 다음 수부터 시작한다. 이 때, 시간을 줄이기 위해 sum이 n보다 커질 경우 두번째 for문을 나가도록 함
+
+"""
+
+def solution(n):
+    answer = 0 #count
+    for i in range(1,n+1) : # 제한조건: 자연수 , n+1까지 범위 설정
+        sum = 0
+        for j in range (i, n+1): 
+            sum += j
+            if sum == n:
+                answer += 1
+                break
+
+            elif sum > n:
+                break
+    return answer
+            
+    
+    
+
+
+
+"""
+3. 수학적 풀이
+"""
