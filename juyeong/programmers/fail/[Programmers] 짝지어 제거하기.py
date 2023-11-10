@@ -48,4 +48,33 @@ def solution(s):
             # curent_val == 0 -> 스택에서 나감
 
 
+"""
+ 스택으로 풀려고 생각해봤는데 딕셔너리 활용하면, 같은 알파벳일 때 넣고 빼기..?
+    1) 정렬
+    2) 시작할 때 스택은 비워져 있다. 첫번째 조건으로 원소를 append
+
+"""
+
+def solution(s):
+    answer = 0 # False로 초기화
+    stackS = [] # 스택 생성
     
+    for i in range(len(s)):
+        #스택이 비어있으면
+        if len(stackS) == 0: 
+            stackS.append(s[i])
+        
+        #스택 맨 위에 있는 원소와 비교
+        elif stackS[-1] == s[i]:
+            stackS.pop() # 인덱스 생략할 경우 제일 뒤에 있는 원소 제거 후 저장
+            
+        else:
+            stackS.append(s[i])
+    
+
+    if len(stackS) == 0:
+        return 1
+
+    return answer
+            
+        
