@@ -61,3 +61,34 @@ def solution(n):
             n = n - 1
             ans += 1
     return ans
+
+
+
+    def solution(n):
+    ans = 0
+    while n:
+        if n % 2 == 0: #짝수거리만큼 이동
+            n = n // 2 #건전지 소모량 없음
+        else: #홀수거리만큼 이동 ->무조건 건전지 소모됐을 것
+            n = n - 1 //
+            ans += 1
+    return ans
+
+
+
+# 참고한 다른 링크 : https://velog.io/@ju_h2/Python-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-level2-%EC%A0%90%ED%94%84%EC%99%80-%EC%88%9C%EA%B0%84-%EC%9D%B4%EB%8F%99
+
+"""
+"사용해야 하는 건전지 사용량의 최솟값을 return하는 solution 함수를 만들어 주세요."
+거꾸로 2로 나눠가면서 구자. 2로 나눠지지 않으면, 점프가 필요하다. -> 건전지 사용 +1
+아 목적지가 0이 되는 N으로 생각하는구나
+
+"""
+
+def solution(N):
+    answer = 0
+    while N > 0:
+        answer += N % 2
+        n = n // 2
+
+    return answer
