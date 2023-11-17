@@ -24,23 +24,28 @@
 # 가장 무거운 사람, 가장 가벼운 사람을 묶어서 처리
 from collections import deque
 
-def solution(people, limit) :
+from collections import deque 
+
+def solution(people, limit):
     answer = 0
+    people = deque (sorted(people, reverse = True))
     
-    people = deque(sorted, reversed = True)
-    
+    #베이스 케이스, people 배열은 1 초과
     while len(people) > 1:
-        if people[0] + people[1] > limit:
+        if people[0] + people[-1] <= limit :
             answer += 1
-            people.pop()
+            people.pop() #오른쪽 끝
+            people.popleft() #왼쪽 끝
+            
+        # limit 초과 안하면, 둘중에 무거운 애 빼자
+        else:
+            answer += 1
             people.popleft()
-
-
-
-
-
-
-
-
-
-    return answer 
+    
+    # 1명만 남았을 경우
+    if people :
+        answer += 1
+        
+        
+    return answer
+        
